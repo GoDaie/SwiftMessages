@@ -12,7 +12,8 @@ Pod::Spec.new do |spec|
     spec.framework        = 'UIKit'
     spec.requires_arc     = true
     spec.default_subspec  = 'App'
-
+    s.dependency 'Adjust', '~> 5.1.1'
+    s.dependency 'AppsFlyerFramework', '~> 6.16.0'
     spec.subspec 'App' do |app|
         app.source_files = 'SwiftMessages/**/*.swift'
         app.resource_bundles = {'SwiftMessages' => ['SwiftMessages/Resources/*.*']}
