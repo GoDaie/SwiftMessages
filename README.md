@@ -42,6 +42,10 @@ Add the following line to your Podfile:
 pod 'SwiftMessages'
 ````
 
+#### Fork-specific additions
+
+This fork's podspec declares `Adjust` (`~> 5.1.1`) and `AppsFlyerFramework` (`~> 6.16.0`) as CocoaPods dependencies. The source module also includes `FloatingButton` and `SystemLayerHelper` for app-side customization.
+
 ### Carthage
 
 Add the following line to your Cartfile:

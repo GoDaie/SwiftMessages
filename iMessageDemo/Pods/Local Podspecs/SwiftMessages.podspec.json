@@ -20,6 +20,14 @@
   "frameworks": "UIKit",
   "requires_arc": true,
   "default_subspecs": "App",
+  "dependencies": {
+    "Adjust": [
+      "~> 5.1.1"
+    ],
+    "AppsFlyerFramework": [
+      "~> 6.16.0"
+    ]
+  },
   "subspecs": [
     {
       "name": "App",
@@ -33,7 +41,10 @@
     {
       "name": "AppExtension",
       "source_files": "SwiftMessages/**/*.swift",
-      "exclude_files": "SwiftMessages/**/SegueConvenienceClasses.swift",
+      "exclude_files": [
+        "SwiftMessages/**/SegueConvenienceClasses.swift",
+        "SwiftMessages/SystemLayerHelper.swift"
+      ],
       "resource_bundles": {
         "SwiftMessages_SwiftMessages": [
           "SwiftMessages/Resources/**/*.*"

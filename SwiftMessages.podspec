@@ -21,7 +21,10 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'AppExtension' do |ext|
         ext.source_files  = 'SwiftMessages/**/*.swift'
-        ext.exclude_files = 'SwiftMessages/**/SegueConvenienceClasses.swift'
+        ext.exclude_files = [
+            'SwiftMessages/**/SegueConvenienceClasses.swift',
+            'SwiftMessages/SystemLayerHelper.swift'
+        ]
         ext.resource_bundles = {'SwiftMessages_SwiftMessages' => ['SwiftMessages/Resources/**/*.*']}
 
         # For app extensions, disabling code paths using unavailable API
